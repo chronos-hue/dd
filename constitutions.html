@@ -15,24 +15,22 @@
             align-items: center;
             min-height: 100vh;
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            width: 80%;
-        }
-        .row {
-            display: flex;
-            justify-content: center;
-            width: 100%;
+            width: 90%;
+            max-width: 1200px;
         }
         .grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
+            gap: 20px; /* Reduced gap for better fit */
             width: 100%;
             justify-items: center;
         }
@@ -40,35 +38,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
-        }
-        .box {
-            width: 160px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid black;
-            border-radius: 8px;
-            background-color: #f4f4f4;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease;
         }
-        .box:hover {
+        .item:hover {
             transform: scale(1.05);
-            box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
         }
-        .box img {
-            width: 80px;
-            height: 80px;
+        .item img {
+            width: 120px; /* Adjusted image size */
+            height: 120px;
             object-fit: contain;
+            transition: transform 0.2s ease;
+        }
+        .item:hover img {
+            transform: scale(1.1); /* Slight zoom effect on hover */
         }
         .text {
-            margin-top: 8px;
+            margin-top: 10px;
             font-size: 16px;
             font-weight: bold;
-            text-transform: capitalize;
+            color: #333; /* Darker text for better readability */
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Subtle text shadow */
             text-align: center;
         }
         .title {
@@ -83,61 +73,41 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="item">
-                <div class="box" onclick="window.location.href='1999_constitution.html';">
-                    <img src="constitutioon.jpg" alt="1999 Constitution">
-                </div>
-                <p class="text"><span class="title">1999</span> <span class="constitution">Constitution</span></p>
-            </div>
+        <div class="item" onclick="window.location.href='1999_constitution.html';">
+            <img src="constitutioon.jpg" alt="1999 Constitution">
+            <p class="text"><span class="title">1999</span> <span class="constitution">Constitution</span></p>
         </div>
         <div class="grid">
-            <div class="item">
-                <div class="box" onclick="window.location.href='1979_constitution.html';">
-                    <img src="constitutioon.jpg" alt="1979 Constitution">
-                </div>
+            <div class="item" onclick="window.location.href='1979_constitution.html';">
+                <img src="constitutioon.jpg" alt="1979 Constitution">
                 <p class="text"><span class="title">1979</span> <span class="constitution">Constitution</span></p>
             </div>
-            <div class="item">
-                <div class="box" onclick="window.location.href='1983_constitution.html';">
-                    <img src="constitutioon.jpg" alt="1983 Constitution">
-                </div>
+            <div class="item" onclick="window.location.href='1983_constitution.html';">
+                <img src="constitutioon.jpg" alt="1983 Constitution">
                 <p class="text"><span class="title">1983</span> <span class="constitution">Constitution</span></p>
             </div>
-            <div class="item">
-                <div class="box" onclick="window.location.href='1960_constitution.html';">
-                    <img src="constitutioon.jpg" alt="1960 Constitution">
-                </div>
+            <div class="item" onclick="window.location.href='1960_constitution.html';">
+                <img src="constitutioon.jpg" alt="1960 Constitution">
                 <p class="text"><span class="title">1960</span> <span class="constitution">Constitution</span></p>
             </div>
-            <div class="item">
-                <div class="box" onclick="window.location.href='1963_constitution.html';">
-                    <img src="constitutioon.jpg" alt="1963 Independence Constitution">
-                </div>
+            <div class="item" onclick="window.location.href='1963_constitution.html';">
+                <img src="constitutioon.jpg" alt="1963 Independence Constitution">
                 <p class="text"><span class="title">1963 Independence</span> <span class="constitution">Constitution</span></p>
             </div>
-            <div class="item">
-                <div class="box" onclick="window.location.href='1954_constitution.html';">
-                    <img src="f.webp" alt="1954 Lyttleton Constitution">
-                </div>
+            <div class="item" onclick="window.location.href='1954_constitution.html';">
+                <img src="f.webp" alt="1954 Lyttleton Constitution">
                 <p class="text"><span class="title">1954 Lyttleton</span> <span class="constitution">Constitution</span></p>
             </div>
-            <div class="item">
-                <div class="box" onclick="window.location.href='1951_constitution.html';">
-                    <img src="g.jpg" alt="1951 Macpherson Constitution">
-                </div>
+            <div class="item" onclick="window.location.href='1951_constitution.html';">
+                <img src="g.jpg" alt="1951 Macpherson Constitution">
                 <p class="text"><span class="title">1951 Macpherson</span> <span class="constitution">Constitution</span></p>
             </div>
-            <div class="item">
-                <div class="box" onclick="window.location.href='1946_constitution.html';">
-                    <img src="1946_constitution.png" alt="1946 Richards Constitution">
-                </div>
+            <div class="item" onclick="window.location.href='1946_constitution.html';">
+                <img src="1946_constitution.png" alt="1946 Richards Constitution">
                 <p class="text"><span class="title">1946 Richards</span> <span class="constitution">Constitution</span></p>
             </div>
-            <div class="item">
-                <div class="box" onclick="window.location.href='1922_constitution.html';">
-                    <img src="1922_constitution.png" alt="1922 Clifford Constitution">
-                </div>
+            <div class="item" onclick="window.location.href='1922_constitution.html';">
+                <img src="1922_constitution.png" alt="1922 Clifford Constitution">
                 <p class="text"><span class="title">1922 Clifford</span> <span class="constitution">Constitution</span></p>
             </div>
         </div>
