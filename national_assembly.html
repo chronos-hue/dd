@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The National Assembly</title>
+    <style>
+        body {
+            background-image: url('b.jpeg'); /* Make sure the image is in the correct directory */
+            background-size: cover; /* Ensures it covers the full screen */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents repetition */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        .logo-box {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .header {
+            text-align: left;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 1px;
+        }
+        .header p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            width: 80%;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            width: 100%;
+            justify-items: center;
+        }
+        .box {
+            width: 160px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            border-radius: 8px;
+            background-color: #f4f4f4;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <div class="logo-box">
+            <img src="nationalassembly.jpg" alt="Logo">
+        </div>
+        <div class="header">
+            <h1>The National Assembly</h1>
+            <p>Federal Republic of Nigeria</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="box" onclick="window.location.href='1st_assembly.html';">1st Assembly</div>
+        </div>
+        <div class="grid">
+            <div class="box" onclick="window.location.href='2nd_assembly.html';">2nd Assembly</div>
+            <div class="box" onclick="window.location.href='3rd_assembly.html';">3rd Assembly</div>
+            <div class="box" onclick="window.location.href='4th_assembly.html';">4th Assembly</div>
+            <div class="box" onclick="window.location.href='5th_assembly.html';">5th Assembly</div>
+            <div class="box" onclick="window.location.href='6th_assembly.html';">6th Assembly</div>
+            <div class="box" onclick="window.location.href='7th_assembly.html';">7th Assembly</div>
+            <div class="box" onclick="window.location.href='8th_assembly.html';">8th Assembly</div>
+            <div class="box" onclick="window.location.href='9th_assembly.html';">9th Assembly</div>
+            <div class="box" onclick="window.location.href='10th_assembly.html';">10th Assembly</div>
+        </div>
+    </div>
+
+</body>
+</html>
