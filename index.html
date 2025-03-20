@@ -13,107 +13,85 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 90vh;
+            min-height: 100vh;
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
             overflow: hidden;
         }
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 60px;
-            width: 900px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; /* Reduced gap for better fit */
+            width: 90%;
+            max-width: 1200px;
             text-align: center;
         }
         .item {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        .box {
-            width: 220px;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid black;
-            border-radius: 8px;
-            background-color: #f4f4f4;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease;
         }
-        .box:hover {
+        .item:hover {
             transform: scale(1.05);
-            box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
         }
-        .box img {
-            width: 100px;
-            height: 100px;
+        .item img {
+            width: 120px; /* Adjusted image size */
+            height: 120px;
             object-fit: contain;
+            transition: transform 0.2s ease;
+        }
+        .item:hover img {
+            transform: scale(1.1); /* Slight zoom effect on hover */
         }
         .text {
             margin-top: 10px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
+            color: #333; /* Darker text for better readability */
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Subtle text shadow */
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="item">
-            <div class="box" onclick="window.location.href='national_assembly.html';">
-                <img src="nationalassembly.jpg" alt="The National Assembly">
-            </div>
+        <div class="item" onclick="window.location.href='national_assembly.html';">
+            <img src="nationalassembly.jpg" alt="The National Assembly">
             <p class="text">The National Assembly</p>
         </div>
-        <div class="item">
-            <div class="box" onclick="window.location.href='constitutions.html';">
-                <img src="constitutioon.jpg" alt="Nigeria Constitutions">
-            </div>
+        <div class="item" onclick="window.location.href='constitutions.html';">
+            <img src="constitutioon.jpg" alt="Nigeria Constitutions">
             <p class="text">Nigeria Constitutions</p>
         </div>
-        <div class="item">
-            <div class="box" onclick="window.location.href='amended_legislation.html';">
-                <img src="amended_legislation.png" alt="Amended Legislation">
-            </div>
+        <div class="item" onclick="window.location.href='amended_legislation.html';">
+            <img src="amended_legislation.png" alt="Amended Legislation">
             <p class="text">Amended Legislation</p>
         </div>
-        <div class="item">
-            <div class="box" onclick="window.location.href='laws_frn.html';">
-                <img src="laws_frn.png" alt="Laws of the FRN">
-            </div>
+        <div class="item" onclick="window.location.href='laws_frn.html';">
+            <img src="laws_frn.png" alt="Laws of the FRN">
             <p class="text">Laws of the FRN</p>
         </div>
-        <div class="item">
-            <div class="box" onclick="window.location.href='legislative_document.html';">
-                <img src="legislative_document.png" alt="Legislative Document">
-            </div>
+        <div class="item" onclick="window.location.href='legislative_document.html';">
+            <img src="legislative_document.png" alt="Legislative Document">
             <p class="text">Legislative Document</p>
         </div>
-        <div class="item">
-            <div class="box" onclick="window.location.href='resources.html';">
-                <img src="resources.png" alt="Resources">
-            </div>
+        <div class="item" onclick="window.location.href='resources.html';">
+            <img src="resources.png" alt="Resources">
             <p class="text">Resources</p>
         </div>
-        <div class="item">
-            <div class="box" onclick="window.location.href='statutes.html';">
-                <img src="statutes.png" alt="Statutes">
-            </div>
+        <div class="item" onclick="window.location.href='statutes.html';">
+            <img src="statutes.png" alt="Statutes">
             <p class="text">Statutes</p>
         </div>
-        <div class="item">
-            <div class="box" onclick="window.location.href='repealed_laws.html';">
-                <img src="repealed_laws.png" alt="Repealed Laws">
-            </div>
+        <div class="item" onclick="window.location.href='repealed_laws.html';">
+            <img src="repealed_laws.png" alt="Repealed Laws">
             <p class="text">Repealed Laws</p>
         </div>
-        <div class="item">
-            <div class="box" onclick="window.location.href='settings.html';">
-                <img src="settings.png" alt="Settings">
-            </div>
+        <div class="item" onclick="window.location.href='settings.html';">
+            <img src="settings.png" alt="Settings">
             <p class="text">Settings</p>
         </div>
     </div>
